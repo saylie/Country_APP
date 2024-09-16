@@ -1,4 +1,3 @@
-
 import React from "react";
 import {render, screen, fireEvent} from '@testing-library/react'
 import '@testing-library/jest-dom/';
@@ -21,10 +20,9 @@ describe('CountryItem Component', () => {
 
 );
 test ('renders addnational country details on view more', () => {
-    render(<CountryItem country={country}/>)
+    render(<CountryItem country={contry}/>)
     expect (screen.queryByText(/capital/i)).not.toBeInDocument();
 
     fireEvent.click(screen.getByText(/view more/i));
 }) 
-
 
